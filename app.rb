@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
+require 'faker'
 
 configure :development, :test do
   require 'pry'
@@ -16,6 +17,6 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
 end
 
 get '/' do
-  @title = "Hello World"
+  @title = "Brussels Sprouts Recipes"
   erb :index
 end
